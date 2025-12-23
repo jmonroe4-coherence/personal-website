@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jessa Monroe | Counseling Intern</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F4F1EA;
+            color: #2C3E50;
+        }
+        .bg-sage { background-color: #4A5D4E }
+        .text-sage { color: #4A5D4E }
+        .bg-olive { background-color: #A3B18A }
+        .text-olive { color: #A3B18A }
+        .border-taupe { border-color: #D7C9B1 }
+        .bg-sand { background-color: #F4F1EA }
+        .bg-deep-blue { background-color: #2C3E50 }
+
+        /* Custom link styling for body content using a deeper slate blue */
+        main a, section a:not([role="button"]) {
+            color: #4E6B7B;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            transition: color 0.2s ease;
+        }
+        main a:hover, section a:not([role="button"]):hover {
+            color: #3D5A6C;
+        }
+
+        /* Ensure nav links and buttons don't get the global underline */
+        nav a {
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+        .btn-link {
+            text-decoration: none !important;
+        }
+    </style>
+</head>
+<body class="selection:bg-olive/30">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <span class="text-xl font-medium tracking-tight text-sage uppercase">Jessa Monroe</span>
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+                <a href="#about" class="hover:text-olive transition-colors">About</a>
+                <a href="#familiar" class="hover:text-olive transition-colors">Is this you?</a>
+                <a href="#background" class="hover:text-olive transition-colors">Background</a>
+                <a href="#approach" class="hover:text-olive transition-colors">How I Help</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex flex-col justify-center px-6 pt-32 pb-24 overflow-hidden">
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center z-10">
+                <div class="order-2 md:order-1">
+                    <div class="inline-block p-2 px-4 mb-6 rounded-full bg-olive/10 text-olive text-sm font-bold tracking-widest uppercase">
+                        Accepting New Clients May 2026
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-light mb-8 leading-tight text-sage text-balance">
+                        Find relief through the <span class="italic text-olive">wisdom</span> of your body
+                    </h1>
+                    <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-lg">
+                        I offer a somatic and science based approach to counseling that helps you understand the roots of your anxiety, stress, or feeling of being stuck.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="mailto:monroej@merrimack.edu" role="button" class="btn-link inline-block px-10 py-4 rounded-full bg-sage text-white font-medium hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl">
+                            Schedule a Consultation
+                        </a>
+                        <a href="#background" role="button" class="btn-link inline-block px-10 py-4 rounded-full border border-taupe/50 bg-white/50 backdrop-blur-sm text-sage font-medium hover:bg-white transition-all">
+                            My Background
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="order-1 md:order-2 flex justify-center">
+                    <div class="relative w-full max-w-md aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white">
+                        <img 
+                            src="https://raw.githubusercontent.com/jmonroe4-coherence/AIMHC-directory-assets/refs/heads/main/image-0.png" 
+                            alt="Jessa Monroe" 
+                            class="w-full h-full object-cover"
+                            onerror="this.src='https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800'"
+                        >
+                    </div>
+                </div>
+            </div>
+            
+            <div class="absolute top-0 right-0 w-1/3 h-full bg-olive/5 -z-0 rounded-l-[10rem]"></div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 px-6 bg-white">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-light mb-8 text-center text-sage text-balance">The Intersection of Theory and Experience</h2>
+                <div class="space-y-8 text-lg leading-relaxed text-gray-700 text-center md:text-left text-balance">
+                    <p>
+                        I am a Master's student in Clinical Mental Health Counseling at Merrimack College. My clinical practice is founded on a deep respect for the individual and the belief that you already possess the innate drive toward wholeness.
+                    </p>
+                    <p>
+                        Therapy with me involves looking at how your brain and body work together to navigate the world. I integrate the Theory of Constructed Emotion with Coherence Therapy to help you update outdated patterns and find a new sense of freedom in your daily life.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recognizing the Pattern (Problem Section) -->
+        <section id="familiar" class="py-24 px-6 bg-olive/5 border-y border-olive/10">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-light mb-6 text-sage">Recognizing the Pattern</h2>
+                    <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                        Symptoms often manifest as your brain's best effort to maintain safety. You might see yourself in one of these common patterns.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Internalizer 1: TMS focus -->
+                    <div class="p-8 rounded-3xl bg-white/50 backdrop-blur-sm border border-olive/20 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <i data-lucide="activity" class="text-olive w-6 h-6 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="text-xl font-medium text-sage mb-3">Internalized Physical Stress</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    You experience back pain, migraines, or tension that flares up when you feel pressured. You might find that your body is holding the emotions you haven't yet found the words for.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Internalizer 2: High Achievement/Freeze -->
+                    <div class="p-8 rounded-3xl bg-white/50 backdrop-blur-sm border border-olive/20 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <i data-lucide="shield-alert" class="text-olive w-6 h-6 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="text-xl font-medium text-sage mb-3">The High-Functioning Freeze</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    You are capable and responsible but often find yourself paralyzed by internal expectations. This procrastination is a protective response from a system that feels overwhelmed by pressure.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Non-Internalizer 1: Dissociation -->
+                    <div class="p-8 rounded-3xl bg-white/50 backdrop-blur-sm border border-olive/20 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <i data-lucide="cloud" class="text-olive w-6 h-6 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="text-xl font-medium text-sage mb-3">The "Away" Feeling</h3>
+                                <p class="text-gray-600 leading-relaxed text-balance">
+                                    You often feel like a spectator in your own life. You might feel numb, foggy, or disconnected from your body as a way to manage environments that feel unsafe or unpredictable.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Non-Internalizer 2: Over-intellectualized -->
+                    <div class="p-8 rounded-3xl bg-white/50 backdrop-blur-sm border border-olive/20 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <i data-lucide="message-square-x" class="text-olive w-6 h-6 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="text-xl font-medium text-sage mb-3">The Insight Plateau</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    You have talked through your story many times and understand it perfectly. However, the symptoms remain. You feel hopeless because talking alone has not led to the deep change you need.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16 text-center">
+                    <p class="text-xl italic text-sage mb-8">Understanding the root of these patterns is the first step toward lasting change.</p>
+                    <a href="#connect" class="text-olive font-semibold hover:text-sage transition-colors inline-flex items-center gap-2">
+                        Explore these patterns with me
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Background Section -->
+        <section id="background" class="py-24 px-6 bg-white border-b border-taupe/20">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-light mb-16 text-center text-sage">My Background</h2>
+                
+                <div class="grid md:grid-cols-2 gap-16">
+                    <div class="space-y-12">
+                        <div>
+                            <h3 class="text-sm uppercase tracking-widest text-olive font-bold mb-6 text-balance">Education & Clinical Foundation</h3>
+                            <div class="space-y-8">
+                                <div class="relative pl-8 border-l-2 border-olive/20">
+                                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-olive"></div>
+                                    <h4 class="font-semibold text-lg">Merrimack College</h4>
+                                    <p class="text-sm text-gray-500 mb-2">MS in Clinical Mental Health Counseling</p>
+                                    <p class="text-gray-600 leading-relaxed text-balance">My graduate coursework provides a rigorous foundation in developmental psychology and clinical theories. I focus on how we can bridge academic research with the lived reality of human suffering.</p>
+                                </div>
+                                <div class="relative pl-8 border-l-2 border-olive/20">
+                                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full border-2 border-olive bg-white"></div>
+                                    <h4 class="font-semibold text-lg text-sage">
+                                        <a href="https://www.sayserenity.com/">Serenity Now Counseling LLC</a>
+                                    </h4>                                    
+                                    <p class="text-sm text-gray-500 mb-2">Clinical Intern (Starting May 2026)</p>
+                                    <p class="text-gray-600 leading-relaxed text-balance">I will be providing supervised counseling services for individuals and groups in Peabody and Melrose. This environment allows me to apply integrative somatic models in a direct clinical setting.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-sm uppercase tracking-widest text-olive font-bold mb-6">Experience</h3>
+                            <p class="text-gray-600 leading-relaxed text-balance">
+                                My professional path has always been centered on human connection and the systems that support our growth. I bring a grounded perspective to the therapeutic space, drawing from years of experience in collaborative environments.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-12">
+                        <div class="bg-sand p-8 rounded-[2rem] shadow-sm border border-taupe/20 text-balance">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="p-3 bg-olive/10 rounded-2xl">
+                                    <i data-lucide="heart" class="text-olive w-6 h-6"></i>
+                                </div>
+                                <h3 class="text-xl font-medium text-sage">Experiential Therapy Training</h3>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                I completed intensive training in <a href="https://toriolds.com/training-group" target="_blank">Minding the Heart</a> with Dr. Tori Olds. This experiential work focused on the neurobiology of therapy and how we can use somatic awareness to heal deep wounds.
+                            </p>
+                            <p class="text-gray-600 leading-relaxed">
+                                Working with Dr. Olds has allowed me to see how deep emotional change happens when we focus on the brain's capacity for memory reconsolidation.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-sm uppercase tracking-widest text-olive font-bold mb-6">The Library: Influences & Inspirations</h3>
+                            <div class="grid grid-cols-1 gap-4">
+                                <div class="flex items-start gap-4 text-balance">
+                                    <i data-lucide="book-open" class="text-olive/40 mt-1 w-5 h-5"></i>
+                                    <div>
+                                        <p class="font-medium text-sage">How Emotions Are Made</p>
+                                        <p class="text-sm text-gray-500 italic">Lisa Feldman Barrett</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4 text-balance">
+                                    <i data-lucide="book-open" class="text-olive/40 mt-1 w-5 h-5"></i>
+                                    <div>
+                                        <p class="font-medium text-sage">Unlocking the Emotional Brain</p>
+                                        <p class="text-sm text-gray-500 italic">Bruce Ecker</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4 text-balance">
+                                    <i data-lucide="book-open" class="text-olive/40 mt-1 w-5 h-5"></i>
+                                    <div>
+                                        <p class="font-medium text-sage">No Bad Parts</p>
+                                        <p class="text-sm text-gray-500 italic">Richard Schwartz</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Approach Section -->
+        <section id="approach" class="py-24 px-6 bg-deep-blue text-white">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-4xl font-light mb-6 text-white text-balance">How We Work Together</h2>
+                <p class="text-lg text-gray-300 text-balance">
+                    Healing happens when we address both the story in your mind and the sensations in your body
+                </p>
+            </div>
+
+            <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-3xl bg-white border border-white/10 hover:border-olive/40 transition-all group">
+                    <i data-lucide="brain" class="text-olive w-8 h-8 mb-4"></i>
+                    <h3 class="text-xl font-medium mb-4 text-sage">Mind & Science</h3>
+                    <p class="text-gray-600 leading-relaxed text-balance">
+                        We use the Theory of Constructed Emotion to understand how your brain creates your reality. This helps us approach your symptoms with curiosity and logic rather than shame.
+                    </p>
+                </div>
+                <div class="p-8 rounded-3xl bg-white border border-white/10 hover:border-olive/40 transition-all group">
+                    <i data-lucide="wind" class="text-olive w-8 h-8 mb-4"></i>
+                    <h3 class="text-xl font-medium mb-4 text-sage">Body & Sensation</h3>
+                    <p class="text-gray-600 leading-relaxed text-balance">
+                        Earthy somatic work helps you reconnect with your physical self. We focus on interoception to help your nervous system feel safe and grounded in the present moment.
+                    </p>
+                </div>
+                <div class="p-8 rounded-3xl bg-white border border-white/10 hover:border-olive/40 transition-all group">
+                    <i data-lucide="refresh-cw" class="text-olive w-8 h-8 mb-4"></i>
+                    <h3 class="text-xl font-medium mb-4 text-sage">Root Transformation</h3>
+                    <p class="text-gray-600 leading-relaxed text-balance">
+                        Through memory reconsolidation and Coherence Therapy we aim for true transformation. We look beyond surface relief to update the emotional roots of your experiences.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Connect Section -->
+        <section id="connect" class="py-24 px-6 bg-white">
+            <div class="max-w-4xl mx-auto p-12 rounded-[3rem] bg-sand border border-taupe/30">
+                <div class="text-center mb-10">
+                    <h2 class="text-4xl font-light mb-6 text-sage">Start Your Journey</h2>
+                    <p class="text-lg text-gray-600 mb-8 text-balance">
+                        I am currently building my waitlist for May 2026 at <a href="https://www.sayserenity.com/">Serenity Now Counseling LLC</a>
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10 text-sm">
+                    <div class="flex items-center gap-3 p-4 bg-white rounded-2xl border border-taupe/20">
+                        <i data-lucide="map-pin" class="text-olive w-5 h-5"></i>
+                        <span>Peabody & Melrose, MA</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-4 bg-white rounded-2xl border border-taupe/20">
+                        <i data-lucide="video" class="text-olive w-5 h-5"></i>
+                        <span>Telehealth Services Available</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+                    <a href="mailto:monroej@merrimack.edu" role="button" class="btn-link flex items-center gap-3 px-8 py-4 bg-sage text-white rounded-full hover:shadow-md transition-all">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                        <span class="font-medium">Request a Consultation</span>
+                    </a>
+                    <div class="flex items-center gap-3 px-8 py-4 bg-white border border-taupe/50 rounded-full">
+                        <i data-lucide="calendar" class="text-slate w-5 h-5"></i>
+                        <span class="font-medium text-gray-500">Waitlist Opening Soon</span>
+                    </div>
+                </div>
+                <p class="mt-8 text-center text-sm text-gray-500 italic text-balance">
+                    All clinical work is completed under the supervision of Serenity Now Counseling LLC
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 text-center border-t border-taupe/20">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-balance">
+            <p class="text-sm text-gray-500">© 2025 Jessa Monroe. All rights reserved.</p>
+            <div class="flex items-center gap-2 text-olive font-medium">
+                <i data-lucide="leaf" class="w-4 h-4"></i>
+                <span>Merrimack College CMHC Student</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons()
+
+        window.onscroll = function() {
+            const nav = document.getElementById('navbar')
+            if (window.pageYOffset > 50) {
+                nav.classList.add('bg-white/80', 'backdrop-blur-md', 'shadow-sm')
+            } else {
+                nav.classList.remove('bg-white/80', 'backdrop-blur-md', 'shadow-sm')
+            }
+        }
+    </script>
+</body>
+</html>
