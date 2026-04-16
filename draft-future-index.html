@@ -1,409 +1,752 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L71PPXPMWH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-L71PPXPMWH');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Metadata -->
     <title>Jessa Monroe | Somatic Counseling for Anxiety & Feeling Stuck in Peabody, MA</title>
-    <meta name="description" content="Counseling intern at Serenity Now Counseling in Peabody, MA and Melrose, MA. Specializing in anxiety, feeling stuck, and somatic therapy. Accepting clients May 2026.">
-    <meta name="keywords" content="Counseling Peabody MA, Counseling Melrose MA, Therapist Peabody, Therapist Melrose, Somatic Therapy Massachusetts, Anxiety Therapy, Depression Therapy, Serenity Now Counseling Peabody">
+    <meta name="description" content="Counseling intern at Serenity Now Counseling in Peabody, MA and Melrose, MA. Specializing in anxiety, trauma, grief, and somatic therapy. Accepting new clients.">
     <link rel="canonical" href="https://jessamonroe.com">
 
-    <!-- JSON-LD Structured Data for Local SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
-      "name": "Jessa Monroe Counseling",
-      "image": "https://raw.githubusercontent.com/jmonroe4-coherence/AIMHC-directory-assets/refs/heads/main/image-0.png",
-      "address": [
-        {
-            "@type": "PostalAddress",
-            "streetAddress": "2 Bourbon Street, Suite LL03",
-            "addressLocality": "Peabody",
-            "addressRegion": "MA",
-            "postalCode": "01960",
-            "addressCountry": "US"
-        },
-        {
-            "@type": "PostalAddress",
-            "streetAddress": "6 Eastman Pl, Suite 210",
-            "addressLocality": "Melrose",
-            "addressRegion": "MA",
-            "postalCode": "02176",
-            "addressCountry": "US"
-        }
-      ],
-      "description": "Counseling intern specializing in somatic therapy for anxiety and internalizing behaviors.",
-      "telephone": ""
-    }
-    </script>
-
-    <!-- Open Graph for Social Media -->
-    <meta property="og:title" content="Jessa Monroe | Somatic Counseling in Peabody, MA">
-    <meta property="og:description" content="Integrative somatic counseling focused on the roots of anxiety and feeling stuck. Accepting clients May 2026.">
-    <meta property="og:url" content="https://jessamonroe.com">
-    <meta property="og:type" content="website">
-
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            --sage: #5D5270;
+            --sage-light: #7A6B80;
+            --olive: #7A6035;
+            --olive-light: #D4C4A8;
+            --sand: #EAE3D8;
+            --sand-dark: #D4C4A8;
+            --stone: #5C5044;
+            --ink: #2A2730;
+            --mist: #F6F3EE;
+        }
+
+        * { box-sizing: border-box; }
+
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            left: 1rem;
+            background: var(--sage);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0 0 0.5rem 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            z-index: 9999;
+            transition: top 0.2s;
+        }
+        .skip-link:focus { top: 0; }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid var(--sage);
+            outline-offset: 3px;
+            border-radius: 4px;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #F4F1EA;
-            color: #2C3E50;
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--mist);
+            color: var(--ink);
+            font-size: 16px;
+            line-height: 1.7;
         }
-        .bg-sage { background-color: #4A5D4E }
-        .text-sage { color: #4A5D4E }
-        .bg-olive { background-color: #A3B18A }
-        .text-olive { color: #A3B18A }
-        .border-taupe { border-color: #D7C9B1 }
-        .bg-sand { background-color: #F4F1EA }
-        .bg-deep-blue { background-color: #2C3E50 }
 
-        /* Custom link styling for body content using a deeper slate blue */
-        /* Exclude buttons explicitly from these rules */
-        main a:not([role="button"]), section a:not([role="button"]) {
-            color: #4E6B7B;
+        h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; }
+
+        #navbar {
+            position: fixed;
+            width: 100%;
+            z-index: 50;
+            padding: 1.25rem 2rem;
+            transition: all 0.4s ease;
+        }
+        #navbar.scrolled {
+            background: rgba(248, 246, 241, 0.92);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+            padding: 0.9rem 2rem;
+        }
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            letter-spacing: 0.08em;
+            color: var(--sage);
+            text-transform: uppercase;
+        }
+        .nav-links { display: flex; gap: 2.5rem; }
+        .nav-links a {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--ink);
+            text-decoration: none;
+            opacity: 0.6;
+            transition: opacity 0.2s;
+        }
+        .nav-links a:hover { opacity: 1; }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            color: var(--ink);
+        }
+        .nav-toggle svg { display: block; }
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: var(--mist);
+            z-index: 40;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2.5rem;
+        }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a {
+            font-size: 1.4rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            color: var(--sage);
+            text-decoration: none;
+            letter-spacing: 0.06em;
+        }
+        .mobile-menu a:hover { text-decoration: underline; }
+        .mobile-close {
+            position: absolute;
+            top: 1.5rem; right: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--ink);
+            padding: 0.5rem;
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-toggle { display: block; }
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 8rem 2rem 5rem;
+            gap: 4rem;
+        }
+        @media (max-width: 768px) {
+            .hero { grid-template-columns: 1fr; padding-top: 6rem; }
+            .hero-image { order: -1; }
+        }
+        .badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #5C4220;
+            background: rgba(184, 158, 122, 0.15);
+            padding: 0.4rem 1rem;
+            border-radius: 100px;
+            margin-bottom: 1.5rem;
+        }
+        h1.hero-headline {
+            font-size: clamp(2.8rem, 5vw, 4.2rem);
+            font-weight: 300;
+            line-height: 1.15;
+            color: var(--ink);
+            margin-bottom: 1.5rem;
+        }
+        h1.hero-headline em { font-style: italic; color: #8A7A8F; }
+        .hero-sub {
+            font-size: 1.1rem;
+            color: #3D3830;
+            line-height: 1.75;
+            margin-bottom: 2.5rem;
+            max-width: 440px;
+        }
+        .btn-primary {
+            display: inline-block;
+            padding: 0.9rem 2.2rem;
+            background: var(--sage);
+            color: white;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .btn-primary:hover { background: var(--sage-light); transform: translateY(-1px); }
+        .btn-secondary {
+            display: inline-block;
+            padding: 0.9rem 2.2rem;
+            border: 1px solid var(--stone);
+            color: var(--sage);
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            text-decoration: none;
+            transition: border-color 0.2s, background 0.2s;
+            background: white;
+        }
+        .btn-secondary:hover { border-color: var(--sage); background: var(--sand); }
+        .hero-image-wrap { position: relative; }
+        .hero-image-wrap img {
+            width: 100%;
+            max-width: 420px;
+            aspect-ratio: 4/5;
+            object-fit: cover;
+            border-radius: 2rem 6rem 2rem 6rem;
+            display: block;
+            margin-left: auto;
+            box-shadow: 0 20px 60px rgba(74, 93, 78, 0.15);
+        }
+        .hero-image-wrap::before {
+            content: '';
+            position: absolute;
+            top: -1.5rem;
+            right: -1.5rem;
+            width: 60%;
+            height: 60%;
+            background: rgba(138, 158, 114, 0.08);
+            border-radius: 2rem;
+            z-index: -1;
+        }
+
+        section { padding: 6rem 2rem; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .container-narrow { max-width: 860px; margin: 0 auto; }
+
+        .section-label {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #5C4220;
+            margin-bottom: 1rem;
+        }
+        h2.section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 300;
+            color: var(--sage);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .orient-strip { background: var(--sage); color: white; padding: 5rem 2rem; }
+        .orient-strip .container-narrow { text-align: center; }
+        .orient-strip h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            font-weight: 300;
+            line-height: 1.3;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        .orient-strip p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.78);
+            margin-bottom: 1rem;
+        }
+        .orient-strip .note {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.5);
+            margin-top: 2rem;
+            font-style: italic;
+        }
+
+        .pattern-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        @media (max-width: 900px) { .pattern-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 560px) { .pattern-grid { grid-template-columns: 1fr; } }
+        .pattern-card {
+            background: white;
+            border: 1px solid var(--sand-dark);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .pattern-card:hover { box-shadow: 0 8px 30px rgba(74, 93, 78, 0.1); transform: translateY(-2px); }
+        .pattern-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--sage);
+            margin-bottom: 0.75rem;
+        }
+        .pattern-card p { font-size: 0.95rem; color: #5a5a52; line-height: 1.7; }
+        .card-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--olive);
+            margin-bottom: 1.25rem;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: start;
+        }
+        @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; gap: 3rem; } }
+        .about-text p { font-size: 1.05rem; color: #4a4a42; line-height: 1.85; margin-bottom: 1.25rem; }
+        .pull-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 300;
+            font-style: italic;
+            color: var(--sage);
+            line-height: 1.5;
+            border-left: 2px solid var(--olive);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .timeline { margin-top: 1rem; }
+        .timeline-item { display: flex; gap: 1.25rem; margin-bottom: 2rem; }
+        .timeline-left { display: flex; flex-direction: column; align-items: center; padding-top: 4px; }
+        .timeline-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--olive); flex-shrink: 0; }
+        .timeline-dot.hollow { background: white; border: 2px solid var(--olive); }
+        .timeline-line { width: 1px; flex: 1; background: var(--sand-dark); margin-top: 4px; }
+        .timeline-content h4 { font-size: 0.95rem; font-weight: 500; color: var(--ink); margin-bottom: 0.2rem; }
+        .timeline-content .sub { font-size: 0.8rem; color: var(--stone); margin-bottom: 0.4rem; }
+        .timeline-content p { font-size: 0.9rem; color: #6a6a62; line-height: 1.65; }
+
+        .approach-section { background: var(--sand); }
+        .approach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+        @media (max-width: 768px) { .approach-grid { grid-template-columns: 1fr; } }
+        .approach-card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            border: 1px solid rgba(200, 188, 168, 0.3);
+        }
+        .approach-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--sage);
+            margin-bottom: 0.75rem;
+            margin-top: 1rem;
+        }
+        .approach-card p { font-size: 0.92rem; color: #5a5a52; line-height: 1.75; }
+        .approach-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 300;
+            color: var(--olive-light);
+            line-height: 1;
+        }
+
+        .expect-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 860px;
+            margin: 3rem auto 0;
+        }
+        @media (max-width: 768px) { .expect-grid { grid-template-columns: 1fr; } }
+        .expect-card {
+            background: var(--sand);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            border: 1px solid var(--sand-dark);
+        }
+
+        .connect-section { background: white; }
+        .connect-box {
+            text-align: center;
+            max-width: 860px;
+            margin: 0 auto;
+        }
+        .connect-box h2 {
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            font-weight: 300;
+            color: var(--sage);
+            margin-bottom: 1rem;
+        }
+        .connect-box p { font-size: 1rem; color: #5a5a52; line-height: 1.8; margin-bottom: 2rem; }
+        .location-chips { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-bottom: 2.5rem; }
+        .chip {
+            font-size: 0.8rem;
+            padding: 0.4rem 1rem;
+            border-radius: 100px;
+            background: white;
+            border: 1px solid var(--sand-dark);
+            color: #5a5a52;
+        }
+        .connect-note { margin-top: 1.5rem; font-size: 0.82rem; color: var(--stone); font-style: italic; }
+
+        /* Inline link styling */
+        main a:not(.btn-primary):not(.btn-secondary):not(.skip-link) {
+            color: var(--sage);
             text-decoration: underline;
-            text-underline-offset: 4px;
-            transition: color 0.2s ease;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            transition: color 0.2s, text-decoration-color 0.2s;
         }
-        main a:not([role="button"]):hover, section a:not([role="button"]):hover {
-            color: #3D5A6C;
+        main a:not(.btn-primary):not(.btn-secondary):not(.skip-link):hover {
+            color: var(--sage-light);
         }
 
-        /* Ensure nav links and buttons don't get the global underline */
-        nav a {
-            color: inherit !important;
-            text-decoration: none !important;
-        }
-        .btn-link {
-            text-decoration: none !important;
-        }
+        footer { padding: 2.5rem 2rem; border-top: 1px solid var(--sand-dark); text-align: center; }
+        footer p { font-size: 0.8rem; color: var(--stone); }
+
+        .divider { width: 40px; height: 1px; background: var(--olive); margin: 1.5rem 0; }
+        .divider.center { margin: 1.5rem auto; }
     </style>
 </head>
-<body class="selection:bg-olive/30">
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 px-6 py-4">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <span class="text-xl font-medium tracking-tight text-sage uppercase">Jessa Monroe</span>
-            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
-                <a href="#about" class="hover:text-olive transition-colors">About</a>
-                <a href="#myclients" class="hover:text-olive transition-colors">Is this You?</a>
-                <a href="#background" class="hover:text-olive transition-colors">Background</a>
-                <a href="#approach" class="hover:text-olive transition-colors">Approach</a>
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+        <button class="mobile-close" id="mobile-close" aria-label="Close navigation menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <a href="#about" onclick="closeMobileMenu()">About</a>
+        <a href="#patterns" onclick="closeMobileMenu()">Is This You?</a>
+        <a href="#approach" onclick="closeMobileMenu()">Approach</a>
+        <a href="#connect" onclick="closeMobileMenu()">Get in Touch</a>
+    </div>
+
+    <nav id="navbar" aria-label="Main navigation">
+        <div class="nav-inner">
+            <span class="nav-name">Jessa Monroe</span>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#patterns">Is This You?</a>
+                <a href="#approach">Approach</a>
+                <a href="#connect">Get in Touch</a>
             </div>
+            <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
         </div>
     </nav>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="relative min-h-screen flex flex-col justify-center px-6 pt-32 pb-24 overflow-hidden">
-            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center z-10">
-                <div class="order-2 md:order-1">
-                    <div class="inline-block p-2 px-4 mb-6 rounded-full bg-olive/10 text-olive text-sm font-bold tracking-widest uppercase">
-                        Accepting New Clients May 2026
-                    </div>
-                    <h1 class="text-5xl md:text-6xl font-light mb-8 leading-tight text-sage text-balance">
-                        Somatic counseling for <span class="italic text-olive">anxiety</span> and feeling "stuck"
+    <main id="main-content">
+
+        <!-- HERO -->
+        <div style="background: var(--mist);">
+            <div class="hero">
+                <div class="hero-text">
+                    <div class="badge">Accepting New Clients</div>
+                    <h1 class="hero-headline">
+                        For people who wonder why something still feels <em>unresolved.</em>
                     </h1>
-                    <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-lg">
-                        I help internalizers in Peabody and Melrose, MA understand the roots of their symptoms through a science-based, transformative approach.
+                    <p class="hero-sub">
+                        I work with kids, teens, and adults in Peabody and Melrose, MA navigating anxiety, depression, grief, trauma, and chronic pain. My clients have spent a lot of time in their heads trying to figure themselves out, and are still waiting for it to feel different.
                     </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="mailto:monroej@merrimack.edu" role="button" class="btn-link inline-block px-10 py-4 rounded-full bg-sage text-white font-medium hover:bg-[#5A6F5F] transition-all shadow-lg hover:shadow-xl">
-                            Join My Waitlist
-                        </a>
-                        <a href="#familiar" role="button" class="btn-link inline-block px-10 py-4 rounded-full border border-taupe/50 bg-white/50 backdrop-blur-sm text-sage font-medium hover:bg-white transition-all">
-                            Is This You?
-                        </a>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="#connect" class="btn-primary">Reach Out</a>
+                        <a href="#patterns" class="btn-secondary">Does This Sound Like You?</a>
                     </div>
                 </div>
-                
-                <div class="order-1 md:order-2 flex justify-center">
-                    <div class="relative w-full max-w-md aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white">
-                        <img 
-                            src="https://raw.githubusercontent.com/jmonroe4-coherence/AIMHC-directory-assets/refs/heads/main/image-0.png" 
-                            alt="Jessa Monroe - Somatic Therapist in Peabody MA" 
-                            class="w-full h-full object-cover"
-                            onerror="this.src='https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800'"
-                        >
-                    </div>
+                <div class="hero-image hero-image-wrap">
+                    <img
+                        src="https://raw.githubusercontent.com/jmonroe4-coherence/AIMHC-directory-assets/refs/heads/main/image-0.png"
+                        alt="Jessa Monroe, Somatic Counseling Intern in Peabody and Melrose, MA"
+                        onerror="this.src='https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800'"
+                    >
                 </div>
-            </div>
-            <div class="absolute top-0 right-0 w-1/3 h-full bg-olive/5 -z-0 rounded-l-[10rem]"></div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="py-24 px-6 bg-white">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-4xl font-light mb-8 text-center text-sage text-balance">Counseling Focused on the Whole Person</h2>
-                <div class="space-y-8 text-lg leading-relaxed text-gray-700 text-center text-balance">
-                    <p>
-                        I am a Master's student in Clinical Mental Health Counseling at Merrimack College. My clinical practice is founded on a deep respect for the individual and the belief that everyone has an innate capacity for wholeness.
-                    </p>
-                    <p>
-                        Effective therapy involves looking at how your brain and body work together to navigate the world. I integrate the Theory of Constructed Emotion with Coherence Therapy, parts work, and other evidence-based approaches to help you update unhelpful patterns and find freedom in your daily life.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Symptoms Section -->
-        <section id="familiar" class="py-24 px-6 bg-olive/5 border-y border-olive/10">
-            <div class="max-w-5xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-light mb-6 text-sage">Recognizing the Pattern</h2>
-                    <p class="text-lg text-slate-600 max-w-2xl mx-auto">
-                        Your symptoms often carry a coherent message. You might see yourself in one of these common experiences:
-                    </p>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="p-8 rounded-3xl bg-white/50 backdrop-blur-sm border border-olive/20 shadow-sm">
-                        <div class="flex items-start gap-4">
-                            <i data-lucide="activity" class="text-olive w-6 h-6 mt-1 flex-shrink-0"></i>
-                            <div>
-                                <h3 class="text-xl font-medium text-sage mb-3">Chronic Pain or Fatigue</h3>
-                                <p class="text-gray-600 leading-relaxed">
-                                    You deal with low energy, pain, migraines, or tension that flares up intermittently. These physical symptoms often occur when you have reached the limit of what you can internalize.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="p-8 rounded-3xl bg-white/50 backdrop-blur-sm border border-olive/20 shadow-sm">
-                        <div class="flex items-start gap-4">
-                            <i data-lucide="shield-alert" class="text-olive w-6 h-6 mt-1 flex-shrink-0"></i>
-                            <div>
-                                <h3 class="text-xl font-medium text-sage mb-3">Burnout & Procrastination</h3>
-                                <p class="text-gray-600 leading-relaxed">
-                                    You find yourself stuck in cycles of perfectionism, procrastination, and burnout. This is a protective response from a system that feels overwhelmed by internal and external expectations.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="p-8 rounded-3xl bg-white/50 backdrop-blur-sm border border-olive/20 shadow-sm">
-                        <div class="flex items-start gap-4">
-                            <i data-lucide="cloud" class="text-olive w-6 h-6 mt-1 flex-shrink-0"></i>
-                            <div>
-                                <h3 class="text-xl font-medium text-sage mb-3">Dissociation & Numbness</h3>
-                                <p class="text-gray-600 leading-relaxed text-balance">
-                                    You often feel disconnected from your own life. This foggy or numb sensation is an understandable way for your mind to manage environments that feel overwhelming (perhaps due to trauma or chronic stress).
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="p-8 rounded-3xl bg-white/50 backdrop-blur-sm border border-olive/20 shadow-sm">
-                        <div class="flex items-start gap-4">
-                            <i data-lucide="message-square-x" class="text-olive w-6 h-6 mt-1 flex-shrink-0"></i>
-                            <div>
-                                <h3 class="text-xl font-medium text-sage mb-3">Feeling "Talked Out" in Therapy</h3>
-                                <p class="text-gray-600 leading-relaxed">
-                                    You have spent years in therapy or you understand your story well. You feel hopeless because intellectual insight has not yet shifted the heavy emotional weight you carry.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Background Section -->
-        <section id="background" class="py-24 px-6 bg-white border-b border-taupe/20">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-4xl font-light mb-16 text-center text-sage">My Background</h2>
-                <div class="grid md:grid-cols-2 gap-16">
-                    <div class="space-y-12">
-                        <div>
-                            <h3 class="text-sm uppercase tracking-widest text-olive font-bold mb-6 text-balance">Education & Foundations</h3>
-                            <div class="space-y-8">
-                                 <div class="relative pl-8 border-l-2 border-olive/20">
-                                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-olive"></div>
-                                    <h4 class="font-semibold text-lg">10 Years as a Communications Professional</h4>
-                                    <p class="text-sm text-gray-500 mb-2">Various Consulting Firms in the Technology Industry</p>
-                                    <p class="text-gray-600 leading-relaxed text-balance">A decade of working with leadership teams in communications was the training ground for me in collaborating with anxious internalizers.</p>
-                                </div>                               
-                                <div class="relative pl-8 border-l-2 border-olive/20">
-                                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-olive"></div>
-                                    <h4 class="font-semibold text-lg">Merrimack College</h4>
-                                    <p class="text-sm text-gray-500 mb-2">M.S. in Clinical Mental Health Counseling</p>
-                                    <p class="text-gray-600 leading-relaxed text-balance">My graduate coursework provides a foundation in psychology and counseling. I hope to bridge academic research with the lived reality of human suffering.</p>
-                                </div>
-                                <div class="relative pl-8 border-l-2 border-olive/20">
-                                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full border-2 border-olive bg-white"></div>
-                                    <h4 class="font-semibold text-lg text-sage">
-                                        <a href="https://www.sayserenity.com/" target="_blank" rel="noopener noreferrer">Serenity Now Counseling LLC</a>
-                                    </h4>                                    
-                                    <p class="text-sm text-gray-500 mb-2">Peabody and Melrose Internship</p>
-                                    <p class="text-gray-600 leading-relaxed text-balance">I will be providing supervised counseling services for teens and adults in Massachusetts. This role will allow me to work with various clients in a private practice setting.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="space-y-12">
-                        <div class="bg-sand p-8 rounded-[2rem] shadow-sm border border-taupe/20 text-balance">
-                            <div class="flex items-center gap-4 mb-6">
-                                <div class="p-3 bg-olive/10 rounded-2xl">
-                                    <i data-lucide="heart" class="text-olive w-6 h-6"></i>
-                                </div>
-                                <h3 class="text-xl font-medium text-sage">Somatic & Experiential Training</h3>
-                            </div>
-                            <p class="text-gray-600 leading-relaxed mb-4">
-                                I am currently training in a course called <a href="https://toriolds.com/training-group" target="_blank" rel="noopener noreferrer">Minding the Heart</a> with Dr. Tori Olds, PhD. Trained by Bruce Ecker, LMFT, Dr. Olds integrates Coherence Therapy with somatic and experiential approaches, including Internal Family Systems (IFS) and Accelerated Experiential Dynamic Psychotherapy (AEDP).                           <p class="text-gray-600 leading-relaxed">
-                                This training shows how deep emotional change happens when we focus on the brain's capacity for healing through mindfulness and memory reconsolidation.
-                            </p>
-                        </div>
-                        <div>
-                            <h3 class="text-sm uppercase tracking-widest text-olive font-bold mb-6">My Library: Influences & Inspirations</h3>
-                            <div class="grid grid-cols-1 gap-4">
-                                <div class="flex items-start gap-4 text-balance">
-                                    <i data-lucide="book-open" class="text-olive/40 mt-1 w-5 h-5"></i>
-                                    <div>
-                                        <p class="font-medium text-sage">
-                                            <a href="https://lisafeldmanbarrett.com/books/how-emotions-are-made/" target="_blank" rel="noopener noreferrer">How Emotions Are Made</a>
-                                        </p>
-                                        <p class="text-sm text-gray-500 italic">Lisa Feldman Barrett</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start gap-4 text-balance">
-                                    <i data-lucide="book-open" class="text-olive/40 mt-1 w-5 h-5"></i>
-                                    <div>
-                                        <p class="font-medium text-sage">
-                                            <a href="https://www.coherencetherapy.org/unlocking/" target="_blank" rel="noopener noreferrer">Unlocking the Emotional Brain</a>
-                                        </p>
-                                        <p class="text-sm text-gray-500 italic">Bruce Ecker</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start gap-4 text-balance">
-                                    <i data-lucide="book-open" class="text-olive/40 mt-1 w-5 h-5"></i>
-                                    <div>
-                                        <p class="font-medium text-sage">
-                                            <a href="https://ifs-institute.com/nobadparts" target="_blank" rel="noopener noreferrer">No Bad Parts</a>
-                                        </p>
-                                        <p class="text-sm text-gray-500 italic">Richard Schwartz</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Approach Section -->
-        <section id="approach" class="py-24 px-6 bg-deep-blue text-white">
-            <div class="max-w-4xl mx-auto text-center mb-16">
-                <h2 class="text-4xl font-light mb-6 text-white text-balance">Trauma-Informed: Understanding the Brain, Listening to the Body</h2>
-                <p class="text-lg text-gray-300 text-balance">
-                    Address both the story in your mind and the sensations in your body for lasting relief.
-                </p>
-            </div>
-            <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-                <div class="p-8 rounded-3xl bg-white border border-white/10 group">
-                    <i data-lucide="brain" class="text-olive w-8 h-8 mb-4"></i>
-                    <h3 class="text-xl font-medium mb-4 text-sage">Neuroscience</h3>
-                    <p class="text-gray-600 leading-relaxed text-balance">
-                        We work together to understand how your brain creates your reality. This helps us approach symptoms with compassion rather than shame.
-                    </p>
-                </div>
-                <div class="p-8 rounded-3xl bg-white border border-white/10 group">
-                    <i data-lucide="wind" class="text-olive w-8 h-8 mb-4"></i>
-                    <h3 class="text-xl font-medium mb-4 text-sage">Somatic Awareness</h3>
-                    <p class="text-gray-600 leading-relaxed text-balance">
-                        Somatic attunement helps you reconnect with your physical self. We focus on interoception to help your nervous system feel safe and grounded, especially if you have trauma.
-                    </p>
-                </div>
-                <div class="p-8 rounded-3xl bg-white border border-white/10 group">
-                    <i data-lucide="refresh-cw" class="text-olive w-8 h-8 mb-4"></i>
-                    <h3 class="text-xl font-medium mb-4 text-sage">Memory Reconsolidation</h3>
-                    <p class="text-gray-600 leading-relaxed text-balance">
-                        Through Coherence Therapy, we aim for true transformation. We look beyond surface relief to update the emotional roots of your experiences.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Connect Section -->
-        <section id="connect" class="py-24 px-6 bg-white">
-            <div class="max-w-4xl mx-auto p-12 rounded-[3rem] bg-sand border border-taupe/30">
-                <div class="text-center mb-10">
-                    <h2 class="text-4xl font-light mb-6 text-sage">Counseling in Peabody and Melrose, MA</h2>
-                    <p class="text-lg text-gray-600 mb-8 text-balance">
-                        I am building my waitlist for May 2026 at <a href="https://www.sayserenity.com/" target="_blank" rel="noopener noreferrer">Serenity Now Counseling LLC</a>.
-                    </p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10 text-sm">
-                    <div class="flex items-center gap-3 p-4 bg-white rounded-2xl border border-taupe/20">
-                        <i data-lucide="map-pin" class="text-olive w-5 h-5 flex-shrink-0"></i>
-                        <div class="flex flex-col">
-                            <span class="font-bold">Peabody Office</span>
-                            <span>2 Bourbon Street, Suite LL03, Peabody, MA 01960</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-3 p-4 bg-white rounded-2xl border border-taupe/20">
-                        <i data-lucide="map-pin" class="text-olive w-5 h-5 flex-shrink-0"></i>
-                        <div class="flex flex-col">
-                            <span class="font-bold">Melrose Office</span>
-                            <span>6 Eastman Pl, Suite 210, Melrose, MA 02176</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-3 p-4 bg-white rounded-2xl border border-taupe/20">
-                        <i data-lucide="video" class="text-olive w-5 h-5 flex-shrink-0"></i>
-                        <span>Telehealth for Massachusetts Residents</span>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
-                    <a href="mailto:monroej@merrimack.edu" role="button" class="btn-link flex items-center gap-3 px-8 py-4 bg-sage text-white rounded-full hover:shadow-md hover:bg-[#5A6F5F] transition-all">
-                        <i data-lucide="mail" class="w-5 h-5"></i>
-                        <span class="font-medium">Join My Waitlist</span>
-                    </a>
-                </div>
-                <p class="mt-8 text-center text-sm text-gray-500 italic text-balance">
-                    Supervised clinical work at Serenity Now Counseling LLC.
-                </p>
-            </div>
-        </section>
-    </main>
-
-    <footer class="py-12 px-6 text-center border-t border-taupe/20">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-balance">
-            <div class="text-left">
-                <p class="text-sm text-gray-500 font-bold mb-1">Jessa Monroe</p>
-                <p class="text-xs text-gray-400">Internship at Serenity Now Counseling LLC</p>
-            </div>
-            <p class="text-sm text-gray-500">© 2025 Jessa Monroe. Somatic Counseling Intern in Peabody and Melrose, MA.</p>
-            <div class="flex items-center gap-2 text-olive font-medium">
-                <i data-lucide="leaf" class="w-4 h-4"></i>
-                <span>Merrimack College Graduate Student in Clinical Mental Health Counseling</span>
             </div>
         </div>
+
+        <!-- ORIENTATION STRIP -->
+        <div class="orient-strip">
+            <div class="container-narrow">
+                <h2>You don't need to be in crisis to be here.</h2>
+                <p>
+                    A lot of people who start therapy have been thinking about it for a while. They're not sure they're "bad enough" to need therapy, or they've tried it before and aren't convinced it will be different this time. Some have a clear sense of what's wrong. Others just know something feels off.
+                </p>
+                <p>
+                    All of that is a completely reasonable place to start.
+                </p>
+                <p class="note">If you're unsure whether this is the right fit, the best thing to do is reach out. No commitment needed.</p>
+                <a href="#connect" class="btn-primary" style="margin-top: 1.5rem; background: white; color: var(--sage); display: inline-block;">Reach Out</a>
+            </div>
+        </div>
+
+        <!-- PATTERN RECOGNITION -->
+        <section id="patterns" style="background: var(--mist);">
+            <div class="container">
+                <div style="text-align: center; max-width: 600px; margin: 0 auto 1rem;">
+                    <div class="section-label">Is This You?</div>
+                    <h2 class="section-title">Recognizing the Pattern</h2>
+                    <p style="color: #5a5a52; font-size: 1.05rem;">You might recognize yourself in one of these descriptions:</p>
+                </div>
+                <div class="pattern-grid">
+                    <div class="pattern-card">
+                        <h3>Insight without integration</h3>
+                        <p>You understand your patterns. You can trace the anxiety back to where it started. And yet it keeps coming back. You've left sessions thinking: "that was helpful, but..."</p>
+                    </div>
+                    <div class="pattern-card">
+                        <h3>A sharp inner critic</h3>
+                        <p>You manage everything on the surface. You're the capable one. But underneath, something has been building, and the environment you're in rewards you for continuing to push it down.</p>
+                    </div>
+                    <div class="pattern-card">
+                        <h3>Chronic pain or fatigue</h3>
+                        <p>You deal with low energy, pain, migraines, or tension that flares up without clear cause. These physical symptoms often arrive when you've reached the limit of what you can hold.</p>
+                    </div>
+                    <div class="pattern-card">
+                        <h3>Disconnection and numbness</h3>
+                        <p>You feel distant from your own life. Foggy. Like you're watching it from the outside. This is an understandable response to environments that have felt chronically overwhelming.</p>
+                    </div>
+                    <div class="pattern-card">
+                        <h3>Burnout and perfectionism</h3>
+                        <p>You cycle between striving and collapse. Perfectionism, procrastination, and exhaustion take turns. It feels like your system is doing its best under impossible conditions.</p>
+                    </div>
+                    <div class="pattern-card">
+                        <h3>Grief that hasn't lifted</h3>
+                        <p>Something happened... a loss, a rupture, a version of your life that didn't come to pass, and it's still too heavy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" style="background: white;">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <div class="section-label">My Perspective</div>
+                        <h2 class="section-title">The gap between knowing and feeling different</h2>
+                        <div class="divider"></div>
+                        <p>
+                            I'm Jessa, a counseling intern at Serenity Now Counseling in Peabody and Melrose, MA, working towards completion of my M.S. in Clinical Mental Health Counseling at Merrimack College.
+                        </p>
+                        <p>
+                            A lot of people think that going deeper means being overwhelmed by their emotions. In fact, the opposite tends to be true when done in a trauma-informed way. When we slow down and get curious about what your body already knows, the feelings that once felt threatening start to make sense. They've been trying to tell you something. 
+                        </p>
+                         <p> <strong>We can learn to listen together.</strong></p>
+                    </div>
+                    <div>
+                        <div class="section-label" style="margin-bottom: 1.5rem;">My Background</div>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-left">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-line"></div>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Clemson University</h4>
+                                    <p class="sub">B.A. in Communication Studies</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-left">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-line"></div>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>From Marketing Communications Director to Counseling Graduate Student</h4>
+                                    <p class="sub">After nearly a decade in the tech industry, I left it all behind to become a student again.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-left">
+                                    <div class="timeline-dot hollow"></div>
+                                    <div class="timeline-line"></div>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Merrimack College, Class of 2027</h4>
+                                    <p class="sub">Working towards M.S. in Clinical Mental Health Counseling</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-left">
+                                    <div class="timeline-dot hollow"></div>
+                                    <div class="timeline-line"></div>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Student, <em>Minding the Heart</em></h4>
+                                    <p class="sub">Experiental training with <a href="https://www.toriolds.com/" target="_blank" rel="noopener noreferrer">Dr. Tori Olds, PhD</a></p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-left">
+                                    <div style="font-size: 14px; line-height: 1; color: #8A7A8F; flex-shrink: 0;">&#10022;</div>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4><a href="https://www.sayserenity.com" target="_blank" rel="noopener noreferrer">Serenity Now Counseling LLC</a></h4>
+                                    <p class="sub">Supervised Clinical Internship in Peabody and Melrose, MA</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- APPROACH -->
+        <section id="approach" class="approach-section">
+            <div class="container">
+                <div style="text-align: center; max-width: 580px; margin: 0 auto;">
+                    <div class="section-label">My Approach</div>
+                    <h2 class="section-title">Therapy that works at the root</h2>
+                    <p style="color: #5a5a52; font-size: 1.05rem;">Therapy should do more than help you cope. I believe it can change the underlying emotional logic that has been running the show.</p>
+                </div>
+                <div class="approach-grid">
+                    <div class="approach-card">
+                        <div class="approach-num">01</div>
+                        <h3>Somatic Awareness</h3>
+                        <p>We pay attention to what your body is holding, not just what your mind can articulate. Sensations, images, and deeper feelings are often where the real information lives.</p>
+                    </div>
+                    <div class="approach-card">
+                        <div class="approach-num">02</div>
+                        <h3>Parts Work</h3>
+                        <p>Drawing on various approaches to parts work (Gestalt, IFS, etc.), we explore with curiosity rather than judgment. We try to understand the role each part plays in your life.</p>
+                    </div>
+                    <div class="approach-card">
+                        <div class="approach-num">03</div>
+                        <h3>Memory Reconsolidation</h3>
+                        <p>Through the lens of coherence, we work to update the deep, unconscious beliefs your system formed long ago to keep you safe. What inner knowings are no longer serving you?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT TO EXPECT -->
+        <section id="expect" style="background: white; padding-bottom: 3rem;">
+            <div class="container">
+                <div style="text-align: center; max-width: 620px; margin: 0 auto 1rem;">
+                    <div class="section-label">What to Expect</div>
+                    <h2 class="section-title">The practical stuff</h2>
+                    <p style="color: #4a4a42; font-size: 1.05rem; line-height: 1.8;">Navigating the logistics of therapy shouldn't add to your stress. Serenity Now Counseling works with a range of insurance providers and payment methods so that when you're ready to start, the practical side is already handled.</p>
+                </div>
+                <div class="expect-grid">
+                    <div class="expect-card">
+                        <div class="section-label">Fees</div>
+                        <p style="font-size: 1rem; color: var(--ink); margin-bottom: 0.6rem; line-height: 1.8;">Individual Session<br><strong>$150</strong></p>
+                        <p style="font-size: 1rem; color: var(--ink); line-height: 1.8;">Couples Session<br><strong>$175</strong></p>
+                        <p style="font-size: 0.85rem; color: var(--stone); margin-top: 1rem; font-style: italic;">Free 15-minute consultation available.</p>
+                    </div>
+                    <div class="expect-card">
+                        <div class="section-label">Insurance</div>
+                        <p style="font-size: 0.9rem; color: var(--ink); line-height: 2;">
+                            Aetna<br>
+                            BlueCross BlueShield<br>
+                            Cigna and Evernorth<br>
+                            Harvard Pilgrim<br>
+                            Optum<br>
+                            United Healthcare
+                        </p>
+                    </div>
+                    <div class="expect-card">
+                        <div class="section-label">Payment Methods</div>
+                        <p style="font-size: 0.9rem; color: var(--ink); line-height: 2;">
+                            Cash · Check<br>
+                            ACH Bank Transfer<br>
+                            Health Savings Account<br>
+                            Visa · Mastercard<br>
+                            American Express · Discover<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONNECT -->
+        <section id="connect" class="connect-section" style="padding-top: 3rem;">
+            <div class="container">
+                <div class="connect-box">
+                    <div class="section-label" style="text-align: center;">Get in Touch</div>
+                    <h2>Ready to reach out?</h2>
+                    <p>
+                        I'm building my caseload at <a href="https://www.sayserenity.com" target="_blank" rel="noopener noreferrer">Serenity Now Counseling</a>. If any of this resonated, even a little, feel free to reach out for a free 15-minute consultation. There's no pressure, just a chance to see if it feels like a fit.
+                    </p>
+                    <div class="location-chips">
+                        <span class="chip">&#128205; Peabody, MA</span>
+                        <span class="chip">&#128205; Melrose, MA</span>
+                        <span class="chip">&#128187; Telehealth (Massachusetts)</span>
+                    </div>
+                    <a href="mailto:monroej@merrimack.edu" class="btn-primary" style="font-size: 0.9rem; padding: 1rem 2.5rem;">
+                        Send Me a Message
+                    </a>
+                    <div style="margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--sand-dark);">
+                        <p style="font-size: 1rem; font-family: 'Cormorant Garamond', serif; font-weight: 400; color: var(--sage); margin-bottom: 1rem;">Serenity Now Office Locations</p>
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; font-size: 0.85rem; color: var(--ink); line-height: 1.7; text-align: center;">
+                            <div>
+                                <strong style="display: block; margin-bottom: 0.2rem;">Peabody</strong>
+                                2 Bourbon Street, Suite LL03<br>Peabody, MA 01960
+                            </div>
+                            <div>
+                                <strong style="display: block; margin-bottom: 0.2rem;">Melrose</strong>
+                                6 Eastman Pl, Suite 210<br>Melrose, MA 02176
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&#169; 2026 Jessa Monroe &nbsp;&middot;&nbsp; Counseling Intern at Serenity Now Counseling LLC in Peabody and Melrose, MA &nbsp;&middot;&nbsp; Merrimack College Clinical Mental Health Counseling</p>
     </footer>
 
     <script>
-        lucide.createIcons()
-        window.onscroll = function() {
-            const nav = document.getElementById('navbar')
-            if (window.pageYOffset > 50) {
-                nav.classList.add('bg-white/80', 'backdrop-blur-md', 'shadow-sm')
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
             } else {
-                nav.classList.remove('bg-white/80', 'backdrop-blur-md', 'shadow-sm')
+                nav.classList.remove('scrolled');
             }
+        });
+
+        const toggle = document.getElementById('nav-toggle');
+        const menu = document.getElementById('mobile-menu');
+        const close = document.getElementById('mobile-close');
+
+        function openMobileMenu() {
+            menu.classList.add('open');
+            toggle.setAttribute('aria-expanded', 'true');
+            close.focus();
         }
+        function closeMobileMenu() {
+            menu.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.focus();
+        }
+
+        toggle.addEventListener('click', openMobileMenu);
+        close.addEventListener('click', closeMobileMenu);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && menu.classList.contains('open')) {
+                closeMobileMenu();
+            }
+        });
     </script>
+
 </body>
 </html>
